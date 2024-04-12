@@ -1,0 +1,42 @@
+Praktikum 4: Grundkonzepte der objekt-orientierten Programmierung II: Vererbung
+
+Konzepte:
+- Vererbung und Klassenhierarchie
+- Sichtbarkeiten
+- Polymorphismus und Zuweisungskompatibilität
+- Statischer und dynamischer Typ
+- Typcast
+- Konstruktoren werden nicht vererbt
+- Abstrakte Klasse
+- Java Interface
+
+Beispiel: Account, CheckingAccount, FixedDepositAccount, SavingsAccount, HasBalance und StockPortfolio
+
+----------------------------------------------------------------------------------------------------
+
+Übung:
+public class A {
+	public void exec() { doIt(); }
+	public void doIt() { System.out.println("A"); }
+}
+public class B extends A {
+	public void doit() { System.out.println("B"); }
+}
+public class C extends B {
+	public void doIt() { System.out.println("C"); }
+}
+
+Was wird ausgegeben bei folgendem Code und warum?
+A a = new B();
+B b = new C();
+a.exec();
+b.exec();
+
+Aufgabe:
+Nehmen Sie die Person-Klasse von letzter Woche (Download auf GATE) und das Interface IsProfessor (Download auf GATE).
+
+Erstellen Sie eine neue Klasse AcademicPerson, die von Person erbt und das IsProfessor implementiert. Eine Person ist Professor, wenn der akademische Grad mit "Prof." beginnt.
+
+Die Klasse AcademicPerson soll einen Konstruktor mit den Parametern (String givenName, String lastName, String academicDegree) sowie einen Getter getAcademicDegree() und Setter setAcademicDegree(String academicDegree) aufweisen.
+
+Laden Sie Ihre neue Klasse auf GATE hoch.
